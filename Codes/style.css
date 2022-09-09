@@ -1,0 +1,545 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*mobile view*/
+ 
+.ered{
+    color: red;
+}
+
+.nav a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav{
+    color: white;
+    z-index: 3;
+}
+
+/*.contain-me img{
+    display: none;
+}*/
+
+.header{
+    background-color: rgb(104, 0, 202);
+    width: absolute;
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.466);
+    width: 100%;
+    z-index: 3;
+    position: fixed;
+}
+
+.header ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+.header ul a{
+    display: block;
+    padding: 20px;
+    border-right:1px solid #aaa;
+    text-decoration: none;
+}
+  
+ul a:hover{
+    background-color: #ddd;
+}
+
+.logo{
+    float: left;
+    color: white;
+    font-size: x-large;
+    font-family: lobster;
+    font-style: italic;
+    cursor: default;
+}
+
+
+.menu{
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.menu-icon{
+    position: relative;
+    cursor: pointer;   
+    float: right; 
+    margin: 20px;
+}
+
+.menu-btn{
+    display: none;
+    padding-bottom: 10px;
+}
+
+.menu-icon .nav-icon{
+    background: #333;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition:background .2s ease out;
+    
+}
+
+.menu-icon .nav-icon:before{
+    background: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 5px;
+    transition: all .2s ease-out;
+}
+
+.menu-icon .nav-icon:after{
+    background: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -5px;
+    transition: all .2 ease-out;
+}
+
+.header .menu-btn:checked ~.menu{
+    max-height: 240px;
+}
+
+.header .menu-btn:checked ~.menu-icon .nav-icon{
+    background-color: transparent;
+}
+
+.header .menu-btn:checked ~.menu-icon .nav-icon:before{
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.header .menu-btn:checked ~.menu-icon .nav-icon:after{
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.fdimg{
+    display: none;
+}
+.foodchin{
+    display: none;
+}
+
+.adtext{
+    display: none;
+    font-size: medium;
+    font-family: sans-serif;
+    color: blueviolet;
+}
+
+.first-division{
+    font-family: lobster;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 60px;
+    cursor: default;
+}
+
+.second-division{
+    font-family: lobster;
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center; 
+    padding-left: 30px;
+    color: blueviolet; 
+    cursor: default;
+}
+
+.third-division {
+    font-family: arial;
+    font-size: small;
+    word-wrap: wrap;
+    padding-left: 20px;
+    padding-right: 30px; 
+    padding-top: 20px;
+}
+
+.fourth-division{
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.view{
+    padding-top: 20px;
+}
+
+.view a{
+    background-color: red;
+    border-radius: 50px;
+    color: white;
+    font-size: small;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.table1{
+    background-color: whitesmoke;
+    padding-bottom: 100px;
+}
+
+.table2{
+    background-color: darkviolet;
+    color: whitesmoke;
+    padding-bottom: 100px;
+}
+
+.sub-division1{
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-weight: bolder;
+    font-family: sans-serif;
+    font-size: large;
+    cursor: default;
+}
+
+.sub-division2 p{
+    text-align: center;
+    font-size: 10px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 20px;
+}
+
+.table3{
+    background-color: whitesmoke;
+    display: flex;
+    padding-bottom: 100px;
+}
+
+.part-one{
+    font-size: small;
+    font-family: sans-serif;
+    padding-top: 5px;
+    text-align: left;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 10px;
+
+}
+
+.part-two{
+    font-size: small;
+    font-family: sans-serif;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.pi{
+    font-size: large;
+    cursor: default;
+}
+
+.form{
+    background-color: blueviolet;
+    padding-bottom: 100px;
+}
+
+.text{
+    font-size: large;
+    font-family: sans-serif;   
+    padding-left: 30px; 
+    padding-top: 30px;
+    cursor: default;
+}
+
+.text2{
+    font-size: small;
+    font-family: sans-serif;
+    padding-left: 30px;
+    padding-top: 5px;
+}
+
+.mail{
+    padding-left: 145px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+/*tablet view*/
+
+
+@media only screen and (min-width: 768px) {
+    .header li{
+        float: left;
+        margin: 10px 20px 0px 0px;
+    }
+
+    .header li a{
+        padding: 20px 30px;
+    }
+
+    .menu{
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .menu-icon{
+        display: none;
+    }
+
+    .header ul a{
+        border-right: none;
+        padding: 10px;
+        color: blueviolet;
+    }
+
+    ul a:hover{
+        background-color: red;
+        border-radius: 70px;
+        color: rgba(247, 247, 12, 0.952);
+        transform: scale(.8);
+        box-shadow: 1px 1px 4px rgba(241, 241, 7, 0.918);
+    }
+
+
+    .header{
+        background-image: url(./leaf.jpg);
+        background-repeat: no-repeat;
+        background-size: absolute;
+        width: absolute;
+        box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.466);
+        width: 100%;
+        z-index: none;
+        height: 250px;
+        position: relative;
+    }
+
+    .table1{
+        background-color: whitesmoke;
+        padding-bottom: 100px;
+    }
+    
+    .table2{
+        padding-bottom: 100px;
+    }
+
+    .table3{
+        padding-bottom: 100px;
+    }
+
+    .logo{
+        color: blueviolet; 
+    }
+     
+    .adtext {
+        float: left;
+        display: inline;
+        padding-top: 50px;
+        
+        padding-left: 50px;
+        text-align: justify;
+    }
+
+    .mail{
+        padding-left: 590px;
+        padding-top: 50px;
+    }
+
+    .ricetext{
+        font-weight: bolder;
+        padding-bottom: 10px;
+        font-size: larger;
+    }
+
+    .viewtwo p{
+        padding-top: 20px;
+    }
+    
+    .viewtwo a{
+        background-color: red;
+        border-radius: 50px;
+        color: white;
+        font-size: small;
+        padding: 5px;
+        text-decoration: none;
+    }
+
+ }
+ 
+
+ /* desktop view*/
+
+    @media only screen and (min-width:1000px) {
+        .header{
+            background-image: url(./leaf.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 500px;
+    }
+
+    .logo{
+        padding-left: 50px;
+        padding-top: 10px;
+    }
+
+    ul a:hover{
+        background-color: red;
+        border-radius: 70px;
+        color: rgba(247, 247, 12, 0.952);
+        transform: scale(.8);
+        box-shadow: 1px 1px 4px rgba(241, 241, 7, 0.918);
+    }
+
+    .view a:hover{
+        background-color: red;
+        border-radius: 70px;
+        color: rgba(247, 247, 12, 0.952);
+        transform: scale(.98);
+        box-shadow: 1px 1px 4px rgba(241, 241, 7, 0.918);
+        transition-delay: .2s;
+    }
+
+
+    .adtext{
+        display: flex;
+    }
+    .ricetext{
+        color: blue;
+        font: 100px;
+        font-size: 100px;
+        font-family: lobster;
+        cursor: default;
+    }
+
+    .bowltext{
+        font-size: large;
+        color: black;
+        font-family: lobster;
+    }
+
+    .nmltxt{
+        font-size: medium;
+        font-family: sans-serif;
+        color: blueviolet;
+    }
+
+    .food1{
+       float: right;
+      margin-left: 100px;
+    }
+
+    .viewtwo {
+        padding-top: 10px;
+    }
+    
+    .viewtwo a{
+        background-color: red;
+        border-radius: 50px;
+        color: white;
+        font-size: small;
+        padding: 5px;
+        text-decoration: none;
+    }
+
+    .viewtwo a:hover{
+        background-color: red;
+        border-radius: 70px;
+        color: rgba(247, 247, 12, 0.952);
+        transform: scale(.98);
+        box-shadow: 1px 1px 4px rgba(241, 241, 7, 0.918);
+        transition-delay: .2s;
+    }
+
+    .food2 img{
+        width: 400px;
+        height: 300px;
+    }
+
+    .table1{
+        background-color: whitesmoke;
+        padding-bottom: 200px;
+       
+    }
+
+    .fdimg{
+        float: left;
+        display: inline-block;
+        
+    }
+
+    .view{
+        padding-top: 20px;
+        padding-right: 599px;   
+    }
+
+ 
+
+    .sub-division2{
+        text-align: center;
+        padding-left: 280px;
+        padding-right: 280px;
+    }
+
+    .submain{
+        text-align: center;
+        padding: 5px 300px 5px 300px;
+    }
+
+    .foodchin img{
+        width: 500px;
+        height: 500px;
+    }
+
+    .foodchin{
+        display: flex;
+    }
+    
+    .table3{
+        display: flex;
+        padding-bottom: 200px;
+    }
+
+    .part-one{
+        font-size: medium;
+        font-family: sans-serif;
+        padding-top: 100px;
+        text-align: left center;
+        padding-bottom: 5px;
+        padding-right: 10px;
+        padding-left: 30px;
+    }
+
+    .part-two{
+        font-size: medium;
+        font-family: sans-serif;
+        padding-top: 100px;
+        padding-bottom: 5px;
+        text-align: right;
+        float: right;
+        padding-left: 200px;
+    }
+
+    .form{
+        display: flex;
+        padding-bottom: 100px;
+    }
+    .mail{
+        padding-left: 400px;
+        padding-top: 50px;
+    }
+ 
+
+
+}
